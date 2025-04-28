@@ -3,7 +3,10 @@ import streamlit as st
 import docx
 import PyPDF2
 import re
+from spacy.cli import download
 
+# Download the model if it's not already installed
+download('en_core_web_sm')
 # Load spaCy model
 nlp = spacy.load("en_core_web_sm")
 
